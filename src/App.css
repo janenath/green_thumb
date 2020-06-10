@@ -178,10 +178,10 @@ footer {
     width: 150px;
   }
   .actionsContainer {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .actionImage {
     width: 60px;
-    margin-right: 10px;
+    margin-right: 0px;
   }
 }
