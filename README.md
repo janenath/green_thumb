@@ -4,7 +4,7 @@
 
 This project was created in  under 4 hours for MintBean's CareerHack Challenge, 06/10/20.
 <br/>
- <a href="green-thumb-game.netlify.app">Link to deployed game</a>
+ <a href="https://green-thumb-game.netlify.app">Link to deployed game</a>
 <img src="https://i.imgur.com/bJCExAE.png" alt="game screenshot"/>
 
 <br/>
