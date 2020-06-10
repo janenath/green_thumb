@@ -18,9 +18,16 @@ class App extends Component {
   }
   startGame = () => {
     this.setState({go: true});
+    this.interval = setInterval(() => {
+      this.setState(prevState => ({
+        day: prevState.day + 1
+      }));
+    }, 1000);
+
   }
   pauseGame = () => {
-    this.setState({go: false})
+    this.setState({go: false});
+    clearInterval(this.interval);
   }
 
   render() {
