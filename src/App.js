@@ -7,7 +7,9 @@ class App extends Component {
     showModal: false,
     go: false,
     day: 0,
-    health: 100
+    health: 100,
+    warning: false,
+    dead: false
   };
 
   openModal = () => {
@@ -20,19 +22,48 @@ class App extends Component {
     this.setState({go: true});
     this.interval = setInterval(() => {
       this.setState(prevState => ({
-        day: prevState.day + 1
+        day: prevState.day + 1,
       }));
     }, 1000);
-
+    this.interval = setInterval(() => {
+      this.setState(prevState => ({
+        health: prevState.health - 10,
+      }));
+      this.checkStatus();
+    }, 2000);
+    
   }
   pauseGame = () => {
     this.setState({go: false});
     clearInterval(this.interval);
   }
+  checkStatus = () => {
+    if(this.state.health <= 0){
+      this.setState({
+        dead: true
+      })
+    } else if(this.state.health <= 30) {
+      this.setState({
+        warning: true
+      })
+    }
+  }
+
+  restartGame = () => {
+    window.location.reload(false);
+  }
 
   render() {
     return (
       <div className="App">
+        {this.state.dead ? 
+        <div className="deadMessage">
+          <p>aww, your plant died!</p>
+          <img src="https://i.imgur.com/oljiV4i.png" alt="pile of dirt"></img>
+          <button onClick={this.restartGame}>try again</button>
+        </div>
+        :
+        <div className="siteContainer">
         <header>
           <h1 className="siteTitle">green thumb</h1>
           <div className="headerButtons">
@@ -68,17 +99,29 @@ class App extends Component {
               <button className="actionButton"><img className="actionImage" src="https://i.imgur.com/xfU5t06.png" alt="sun"></img>move plant to sun</button>
             </div>
           </div>
-          <div className="statusBar">
+          {this.state.warning ? 
+            <div className="statusBar warning">
+              <p>day: {this.state.day}</p>
+              <p>health: {this.state.health}%</p>
+            </div>
+            :
+            <div className="statusBar">
             <p>day: {this.state.day}</p>
             <p>health: {this.state.health}%</p>
           </div>
+          }
+          
         </div>
         <footer>
           <p>©2020 <a href="https://www.janenath.com" target="_blank" rel="noopener noreferrer">Jane Nath</a></p>
           <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank" rel="noopener noreferrer">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noopener noreferrer">www.flaticon.com</a></p>
         </footer>
+          </div>
+          }
       </div>
+    
     );
+
   }
 }
 
