@@ -8,6 +8,7 @@ class App extends Component {
     go: false,
     day: 0,
     health: 100,
+    caution: false,
     warning: false,
     dead: false
   };
@@ -112,7 +113,7 @@ class App extends Component {
                 <br/>
                 <p>Only problem? You accidentally threw out the handy care instructions from the shopkeeper!</p>
                 <br/>
-                <p>Let's see if you can figure out how to take care of your new plant!</p>
+                <p>Let's see if you can figure out how to take care of your new plant.</p>
                 <br/>
                 <p>If you're plant's health goes down to 0, it will be time to take it to the compost heap  :(</p>
                 <a id="close" onClick={this.hideModal}>close</a>
