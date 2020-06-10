@@ -20,12 +20,12 @@ class App extends Component {
   }
   startGame = () => {
     this.setState({go: true});
-    this.interval = setInterval(() => {
+    this.dayInterval = setInterval(() => {
       this.setState(prevState => ({
         day: prevState.day + 1,
       }));
     }, 500);
-    this.interval = setInterval(() => {
+    this.healthInterval = setInterval(() => {
       this.setState(prevState => ({
         health: prevState.health - 15,
       }));
@@ -35,7 +35,8 @@ class App extends Component {
   }
   pauseGame = () => {
     this.setState({go: false});
-    clearInterval(this.interval);
+    clearInterval(this.dayInterval);
+    clearInterval(this.healthInterval);
   }
   checkStatus = () => {
    if(this.state.health <= 0){
