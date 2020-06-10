@@ -4,7 +4,10 @@ import './App.css';
 
 class App extends Component {
   state = {
-    showModal: false
+    showModal: false,
+    go: false,
+    day: 0,
+    health: 100
   };
 
   openModal = () => {
@@ -13,17 +16,36 @@ class App extends Component {
   hideModal = () => {
     this.setState({showModal: false});
   }
+  startGame = () => {
+    this.setState({go: true});
+  }
+  pauseGame = () => {
+    this.setState({go: false})
+  }
 
   render() {
     return (
       <div className="App">
         <header>
           <h1 className="siteTitle">green thumb</h1>
-          <button id="openInstructions" onClick={this.openModal}>instructions</button>
+          <div className="headerButtons">
+            <button id="openInstructions" onClick={this.openModal}>instructions</button>
+            {this.state.go ? <button id="pause" onClick={this.pauseGame}>pause</button>
+            : <button id="start" onClick={this.startGame}>let's start!</button>
+            }
+          </div>
           {this.state.showModal ? 
             <div id="instructionsModal">
               <div id="modalTextbox">
-                <p>welcome to green thumb!</p>
+                <h3>Welcome to green thumb!</h3>
+                <br/>
+                <p>You took a trip to the plant shop this morning and found a beautiful new plant for your desk.</p>
+                <br/>
+                <p>Only problem? You accidentally threw out the handy care instructions from the shopkeeper!</p>
+                <br/>
+                <p>Let's see if you can figure out how to take care of your new plant!</p>
+                <br/>
+                <p>If you're plant's health goes down to 0, it will be time to take it to the compost heap  :(</p>
                 <a id="close" onClick={this.hideModal}>close</a>
               </div>
             </div> 
@@ -38,6 +60,10 @@ class App extends Component {
               <button className="actionButton"><img className="actionImage" src="https://i.imgur.com/agzi7zf.png" alt="fertilizer"></img>feed plant</button>
               <button className="actionButton"><img className="actionImage" src="https://i.imgur.com/xfU5t06.png" alt="sun"></img>move plant to sun</button>
             </div>
+          </div>
+          <div className="statusBar">
+            <p>day: {this.state.day}</p>
+            <p>health: {this.state.health}%</p>
           </div>
         </div>
         <footer>
