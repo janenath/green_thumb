@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.siteTitle {
+  font-family: 'Bellota', cursive;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  color: rgb(108,155,100);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.plantImage {
+  width: 400px;
+  height: 400px;
+}
