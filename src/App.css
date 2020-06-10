@@ -6,6 +6,14 @@
 .App {
   text-align: center;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+  color: rgb(108,155,100);
+}
+a:hover {
+  text-decoration: underline;
+}
 
 /* header */
 header {
@@ -29,6 +37,42 @@ header button:hover {
   color: white;
 }
 
+/* instructions modal */
+#instructionsModal {
+  background-color: rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+#modalTextbox {
+  background: rgb(108,155,100);
+  color: white;
+  height: 20%;
+  width: 50%;
+  padding: 100px;
+  margin-top: 150px;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+#modalTextbox a {
+  color: white;
+  text-decoration: underline;
+  font-size: 16px;
+
+}
+#modalTextbox a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
 /* body */
 .plantContainer {
   display: flex;
@@ -46,7 +90,7 @@ header button:hover {
   align-items: flex-start;
   margin-left: 50px;
 }
-body button {
+.body button {
   background: white;
   color: rgb(108,155,100);
   border: none;
@@ -54,7 +98,7 @@ body button {
   font-weight: bold;
   margin-bottom: 10px;
 }
-body button:hover {
+.body button:hover {
   background: rgb(108,155,100);
   color: white;
   border-radius: 10px;
@@ -75,12 +119,5 @@ body button:hover {
 footer {
   margin-top: 100px;
 }
-footer a {
-  color: inherit;
-  text-decoration: none;
-  color: rgb(108,155,100);
-}
-footer a:hover {
-  text-decoration: underline;
-}
+
 
