@@ -24,13 +24,13 @@ class App extends Component {
       this.setState(prevState => ({
         day: prevState.day + 1,
       }));
-    }, 1000);
+    }, 500);
     this.interval = setInterval(() => {
       this.setState(prevState => ({
-        health: prevState.health - 10,
+        health: prevState.health - 15,
       }));
       this.checkStatus();
-    }, 2000);
+    }, 1000);
     
   }
   pauseGame = () => {
@@ -38,7 +38,7 @@ class App extends Component {
     clearInterval(this.interval);
   }
   checkStatus = () => {
-    if(this.state.health <= 0){
+   if(this.state.health <= 0){
       this.setState({
         dead: true
       })
@@ -46,6 +46,36 @@ class App extends Component {
       this.setState({
         warning: true
       })
+    } else {
+      this.setState({
+        warning: false
+      })
+    }
+  }
+
+  waterPlant = () => {
+    if(this.state.health + 3 <= 100){
+      this.setState(prevState => ({
+        health: prevState.health + 3
+      })
+      )
+    }
+  }
+
+  feedPlant = () => {
+    if(this.state.health + 5 <= 100){
+      this.setState(prevState => ({
+        health: prevState.health + 5
+      })
+      )
+    }
+  }
+  movePlant = () => {
+    if(this.state.health + 7 <= 100){
+      this.setState(prevState => ({
+        health: prevState.health + 7
+      })
+      )
     }
   }
 
@@ -94,9 +124,9 @@ class App extends Component {
           <div className="plantContainer">
             <img className="plantImage" src="https://i.imgur.com/oj3KRB2.png"></img>
             <div className="actionsContainer">
-              <button className="actionButton"><img className="actionImage" src="https://i.imgur.com/Cd69PTX.png" alt="watering can"></img>water plant</button>
-              <button className="actionButton"><img className="actionImage" src="https://i.imgur.com/agzi7zf.png" alt="fertilizer"></img>feed plant</button>
-              <button className="actionButton"><img className="actionImage" src="https://i.imgur.com/xfU5t06.png" alt="sun"></img>move plant to sun</button>
+              <button className="actionButton" onClick={this.waterPlant}><img className="actionImage" src="https://i.imgur.com/Cd69PTX.png" alt="watering can"></img>water plant</button>
+              <button className="actionButton" onClick={this.feedPlant}><img className="actionImage" src="https://i.imgur.com/agzi7zf.png" alt="fertilizer"></img>feed plant</button>
+              <button className="actionButton" onClick={this.movePlant}><img className="actionImage" src="https://i.imgur.com/xfU5t06.png" alt="sun"></img>move plant to sun</button>
             </div>
           </div>
           {this.state.warning ? 
