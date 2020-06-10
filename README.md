@@ -4,15 +4,18 @@
 
 This project was created in  under 4 hours for MintBean's CareerHack Challenge, 06/10/20.
 <br/>
-Link to deployed game: green-thumb-game.netlify.app
-<img src="https://i.imgur.com/bJCExAE.png" alt="game screenshot"></img>
+ <a href="green-thumb-game.netlify.app">Link to deployed game</a>
+<img src="https://i.imgur.com/bJCExAE.png" alt="game screenshot"/>
 
 <br/>
-Future Goals:
-increased mobile responsiveness, introductory game phase where user can choose a specific plant (level easy, medium, or hard) and customize their plant's "home" (background color, change pot, etc.), increased complexity of gameplay, for example, if user waters plant too often, it decreases plant's health
+<h3>Future Goals:</h3>
+<ul>
+<li>increased mobile responsiveness</li>
+<li>introductory game phase where user can choose a specific plant (level easy, medium, or hard) and customize their plant's "home" (background color, change pot, etc.)</li>
+<li>increased complexity of gameplay, for example, if user waters plant too often, it decreases plant's health</li>
 
 <br/><br />
-To view more of my work, check out my portfolio at www.janenath.com
+<h4>To view more of my work, check out my portfolio at <a href="www.janenath.com"></a></h4>
 
 
 
