@@ -132,8 +132,8 @@ header button:hover {
   align-items: center;
 }
 .plantImage {
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
 }
 .actionsContainer {
   display: flex;
@@ -168,7 +168,7 @@ header button:hover {
 .statusBar {
   background: rgb(108,155,100);
   color: white;
-  margin: 100px 50px 50px 50px;
+  margin: 50px;
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
@@ -181,9 +181,8 @@ header button:hover {
 
 /* footer */
 footer {
-  margin-top: 100px;
+  margin-top: 50px;
 }
-
 
 
 
@@ -194,11 +193,19 @@ footer {
     width: 200px;
     height: 200px;
   }
-  .statusBar {
-    margin: 50px;
+}
+
+@media (max-width: 600px) {
+  header button {
+    font-size: 18px;
+    width: 150px;
   }
-  footer {
-    margin-top: 50px;
+  .actionsContainer {
+    margin-left: 5px;
+  }
+  .actionImage {
+    width: 60px;
+    margin-right: 0px;
   }
 }
 
