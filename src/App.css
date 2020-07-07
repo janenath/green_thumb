@@ -110,7 +110,7 @@ header button:hover {
   margin: 5px;
   font-size: 1em;
 }
-#modalTextbox a {
+#modalTextbox button {
   font-family: 'Bellota', cursive;
   color: white;
   text-decoration: underline;
@@ -119,7 +119,7 @@ header button:hover {
   cursor: pointer;
   margin-top: 50px;
 }
-#modalTextbox a:hover {
+#modalTextbox button:hover {
   color: white;
   text-decoration: none;
 }

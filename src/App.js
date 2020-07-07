@@ -116,7 +116,7 @@ class App extends Component {
                 <p>Let's see if you can figure out how to take care of your new plant.</p>
                 <br/>
                 <p>If you're plant's health goes down to 0, it will be time to take it to the compost heap  :(</p>
-                <a id="close" onClick={this.hideModal}>close</a>
+                <button id="close" onClick={this.hideModal}>close</button>
               </div>
             </div> 
             : 
@@ -124,7 +124,7 @@ class App extends Component {
         </header>
         <div className="body">
           <div className="plantContainer">
-            <img className="plantImage" src="https://i.imgur.com/oj3KRB2.png"></img>
+            <img className="plantImage" alt="plant illustration" src="https://i.imgur.com/oj3KRB2.png"></img>
             <div className="actionsContainer">
               <button className="actionButton" onClick={this.waterPlant}><img className="actionImage" src="https://i.imgur.com/Cd69PTX.png" alt="watering can"></img>water plant</button>
               <button className="actionButton" onClick={this.feedPlant}><img className="actionImage" src="https://i.imgur.com/agzi7zf.png" alt="fertilizer"></img>feed plant</button>
