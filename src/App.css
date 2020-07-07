@@ -90,7 +90,7 @@ header button:hover {
   color: white;
   width: 50%;
   height: 75%;
-  min-height: 750px;
+  min-height: 800px;
   padding: 50px;
   margin: 50px 0;
   border-radius: 10px;
@@ -102,7 +102,7 @@ header button:hover {
 
 }
 #modalTextbox h3 {
-  margin: 20px;
+  margin: 40px auto;
   font-family: 'Bellota', cursive;
   font-size: 2em;
 }
@@ -118,7 +118,7 @@ header button:hover {
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
-  margin: 50px auto;
+  margin: 40px auto;
 }
 #modalTextbox button:hover {
   color: white;
