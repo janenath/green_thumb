@@ -111,13 +111,14 @@ header button:hover {
   font-size: 1em;
 }
 #modalTextbox button {
+  background: rgb(108,155,100,0.98);
   font-family: 'Bellota', cursive;
   color: white;
   text-decoration: underline;
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 #modalTextbox button:hover {
   color: white;
