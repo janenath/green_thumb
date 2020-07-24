@@ -15,7 +15,7 @@ This project was created in  under 4 hours for MintBean's CareerHack Challenge, 
 <li>increased complexity of gameplay, for example, if user waters plant too often, it decreases plant's health</li>
 
 <br/><br />
-<h4>To view more of my work, check out my portfolio at <a href="www.janenath.com"></a></h4>
+<h4>To view more of my work, check out my portfolio at <a href="www.janenath.com">janenath.com</a></h4>
 
 
 
